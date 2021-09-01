@@ -6,18 +6,16 @@
 
 e_x <- 0.682
 
-larghezza_popolazione <- 1000L
+larghezza_popolazione <- 1000000L
 
 popolazione <- rnorm(larghezza_popolazione)
 
 totale <- 0
-n_elementi <- 0L
 
 for (x in popolazione) {
-  if (x < 1 & x > -1){
-    totale <- totale + x
-    n_elementi <- n_elementi +1
+  if (x <= 1 & x >= -1){
+    totale <- totale + 1
   }
 }
 
-xn <- totale / n_elementi
+xn <- totale / larghezza_popolazione
