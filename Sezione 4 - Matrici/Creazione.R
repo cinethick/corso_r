@@ -50,3 +50,28 @@ C
 
 # I nomi delle colonne e delle righe negli indici
 # devono essere usati con gli apici (altrimenti collidono con le variabili)
+
+# names è una funzione per assegnare e vedere i nomi di un vettore
+vettore <- 1:5
+vettore
+names(vettore)
+names(vettore) <- c('a', 'b', 'c', 'd', 'e')
+names(vettore)
+vettore[3]
+
+# i nomi vengono incollati agli elementi del vettore (come se fosse un 2d)
+vettore
+vettore['a']
+names(vettore) <- NULL
+names(vettore)
+
+vettore_temp <- c('a', 'B', 'zZ')
+matrice_temp <- matrix(vettore_temp, 3, 3, TRUE)
+matrice_temp
+
+rownames(matrice_temp) <- c('r1', 'r2', 'r3')
+colnames(matrice_temp) <- c('x', 'y', 'z')
+
+matrice_temp
+matrice_temp[2,2] <- 0
+matrice_temp['r2','y'] <-1
