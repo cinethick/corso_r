@@ -29,3 +29,4 @@ istogramma +
 grafico + geom_point(aes(size = BudgetMilioni)) +
   geom_smooth() + facet_grid(Genere ~ Anno) +
   coord_cartesian(ylim = c(0, 100))
+
